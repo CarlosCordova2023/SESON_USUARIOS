@@ -1,0 +1,47 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Registro de Usuarios{% endblock %}
+
+{% block content %}
+
+{% comment %}     <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .form-container {
+            max-width: 500px;
+            margin: auto;
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: 0.5rem;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+        }
+    </style> {% endcomment %}
+
+    <div class="container mt-5">
+        <div class="form-container">
+            <h2 class="text-center mb-4">Registro de usuarios al sistema</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="username" class="form-label">Nombre de usuario</label>
+                    <input type="text" class="form-control" id="username" placeholder="Ingrese su nombre de usuario" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control" id="email" placeholder="Ingrese su correo electrónico" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="password" placeholder="Ingrese su contraseña" required>
+                    <div class="form-text">La contraseña debe tener al menos 8 caracteres, incluyendo una letra mayúscula y un número.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="confirm-password" class="form-label">Confirmar contraseña</label>
+                    <input type="password" class="form-control" id="confirm-password" placeholder="Confirme su contraseña" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Registrarse</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

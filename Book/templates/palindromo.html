@@ -1,0 +1,23 @@
+
+
+{% extends 'base.html' %}
+
+{% block title %}Palindromo{% endblock %}
+
+{% block content %}
+    <h1>Verificación de Palíndromo</h1>
+    <p>La palabra o frase que ingresaste es: <strong>{{ palabra }}</strong></p>
+    {% if es_palindromo %}
+        <p>¡Es un palíndromo!</p>
+    {% else %}
+        <p>No es un palíndromo.</p>
+    {% endif %}
+
+        <!-- Formulario para verificar un palíndromo -->
+        <h2>Verificar si una palabra o frase es un palíndromo</h2>
+        <form action="{% url 'verificar_palindromo_param' %}" method="get">
+            <label for="palabra">Introduce una palabra o frase:</label>
+            <input type="text" id="palabra" name="palabra" required>
+            <button type="submit">Verificar</button>
+        </form>
+    {% endblock %}

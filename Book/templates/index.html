@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Bienvenidos a mi sitio de libros</h1>
+        <p class="lead">Esta es la página principal de la aplicación de libros.</p>
+        <p class="lead">Todas las actividades se encuentran en está página.</p>
+    </div>
+    <div class="text-center">
+        <a href="{% url 'verificar_palindromo_param' %}" class="btn btn-primary">Verificar Palíndromo</a>
+    </div>
+
+
+
+{% comment %}     <!-- Formulario para verificar un palíndromo -->
+        <h2>Verificar si una palabra o frase es un palíndromo</h2>
+        <form action="{% url 'verificar_palindromo_param' %}" method="get">
+            <label for="palabra">Introduce una palabra o frase:</label>
+            <input type="text" id="palabra" name="palabra" required>
+            <button type="submit">Verificar</button>
+        </form> {% endcomment %}
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Diferencias entre libros{% endblock %}
+
+{% block content %}
+    <h1>Lista de Libros</h1>
+    <ul>
+        {% for libro in libros %}
+            <li>{{ libro.titulo }} - Autor: {{ libro.autor }} - Valoración: {{ libro.valoracion }} - Fecha de Creacion: {{ libro.fecha_creacion }} - Fecha de Modificación: {{ libro.fecha_modificacion}}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Libros con Valoración Mayor a 1500</h2>
+    <ul>
+        {% for libro in libros_filtrados %}
+            <li>{{ libro.titulo }} - Autor: {{ libro.autor }} - Valoración: {{ libro.valoracion }}- Fecha de Creacion: {{ libro.fecha_creacion }} - Fecha de Modificación: {{ libro.fecha_modificacion}}</li>
+        {% endfor %}
+    </ul>
+
+    <h1>Lista de Libros en base de datos PostGresql</h1>
+        <ul class="list-group">
+            {% for libro in libros %}
+                <li class="list-group-item">
+                    <strong>{{ libro.titulo }}</strong> - Autor: {{ libro.autor }} - Valoración: {{ libro.valoracion }}- Fecha de Creacion: {{ libro.fecha_creacion }} - Fecha de Modificación: {{ libro.fecha_modificacion}}
+                </li>
+            {% endfor %}
+        </ul>
+{% endblock %}

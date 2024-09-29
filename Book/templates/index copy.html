@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenidos a mi sitio de libros</title>
+</head>
+<body>
+    <h1>Bienvenidos a mi sitio de libros</h1>
+    <p>Esta es la página principal de la aplicación de libros.</p>
+    <p>Página de inicio</p>
+
+      <!-- Formulario para verificar un palíndromo -->
+      <h2>Verificar si una palabra o frase es un palíndromo</h2>
+      <form action="{% url 'verificar_palindromo_param' %}" method="get">
+          <label for="palabra">Introduce una palabra o frase:</label>
+          <input type="text" id="palabra" name="palabra" required>
+          <button type="submit">Verificar</button>
+      </form>
+</body>
+</html>

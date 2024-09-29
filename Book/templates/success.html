@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}Ingresar libros{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h1>Libro ingresado con éxito</h1>
+        <a href="{% url 'inputbook' %}" class="btn btn-primary">Ingresar otro libro</a>
+    </div>
+    {% endblock %}

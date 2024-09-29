@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Libros BD{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h1>Lista de Libros</h1>
+        <ul class="list-group">
+            {% for libro in libros %}
+                <li class="list-group-item">
+                    <strong>{{ libro.titulo }}</strong> - Autor: {{ libro.autor }} - Valoración: {{ libro.valoracion }}- Fecha de Creacion: {{ libro.fecha_creacion }} - Fecha de Modificación: {{ libro.fecha_modificacion}}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

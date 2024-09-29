@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libros con alta valoración</title>
+</head>
+<body>
+    <h1>Libros con Valoración Mayor a 1500</h1>
+    <ul>
+        {% for libro in libros %}
+            <li>{{ libro.titulo }} - Autor: {{ libro.autor }} - Valoración: {{ libro.valoracion }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
